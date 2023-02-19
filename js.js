@@ -6,7 +6,7 @@ function calculate() {
     const kg = document.getElementById("weight").value
     const r = document.getElementById("rounds").value
 
-    cal = 4*(9.8*kg*d*r)
+    cal = 9.8*kg*d*r
     out.innerHTML = `Total Calories Burnt: ${cal} Calories`
     alert(`Total Calories Burnt: ${cal} Small Calories`)
     return false
