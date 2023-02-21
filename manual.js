@@ -6,7 +6,7 @@ function calculate1() {
     let cal
 
     cal = (9.8*kg*d*r*4) / 4148
-    out.innerHTML = `Total Calories Burnt: ${cal} Calories`
+    out.innerHTML = `Total Calories Burnt: ${cal} Kilo Calories, or ${cal * 1000} Small calories`
     alert(`Total Calories Burnt: ${cal} Calories (Kilo Calories), or ${cal * 1000} Small calories, Good Job!`)
     return false
 }
