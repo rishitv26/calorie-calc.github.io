@@ -18,7 +18,6 @@ function calculate2() {
     const cal = document.getElementById("cal").value
     let rounds
 
-    // (9.8*kg*d*r*4) / 4148
     rounds = 4148 * cal / (9.8*4*kg*d)
     out.innerHTML = `Total Rounds you need to do: ${rounds}`
     alert(`Total Rounds you need to do: ${rounds}, You can do it!`)
@@ -55,6 +54,7 @@ function four() {
 
 function init() {
     document.getElementById("form1").onsubmit = calculate1
+    document.getElementById("form2").onsubmit = calculate2
     document.getElementById("1l").style.display = 'none'
     document.getElementById("2l").style.display = 'none'
     document.getElementById("3l").style.display = 'none'
