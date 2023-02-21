@@ -7,23 +7,67 @@
     <title>Calorie Calculator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <style>
-
+        iframe {
+            display: block;
+            border: none;         /* Reset default border */
+            height: 100vh;        /* Viewport-relative units */
+            width: calc(100% + 17px);
+        }
+        #frame {
+            overflow-x: hidden;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Basic Calorie Calculator</h1>
-        <form id="form">
-            <label>Distance Covered by Weight in one Round: (in meters)</label><br>
-            <input type="number" id="distance" step="any"><br>
-            <label>Total Weight of Weights bieng lifted: (in kg)</label><br>
-            <input type="number" id="weight" step="any"><br>
-            <label>Total rounds completed: </label><br>
-            <input type="number" id="rounds" step="any"><br>
-            <button type="submit">Calculate</button><br>
-        </form>
-        <h2 id="out"></h2>
-        <script src="js.js"></script>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Calculation Type
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" id="1" onclick="one()">Manual</a></li>
+              <li><a class="dropdown-item" id="2" onclick="two()">Automated</a></li>
+              <li><a class="dropdown-item" id="3" onclick="three()">Specific Burn Manual</a></li>
+              <li><a class="dropdown-item" id="4" onclick="four()">Specific Burn Automated</a></li>
+            </ul>
+        </div>
+        <div id="1l">
+            <h1>Manual Calculation</h1>
+            <form id="form1">
+                <label>Distance Covered by Weight in one Round: (in meters)</label><br>
+                <input type="number" id="distance" step="any"><br>
+                <label>Total Weight of Weights bieng lifted: (in kg)</label><br>
+                <input type="number" id="weight" step="any"><br>
+                <label>Total rounds completed: </label><br>
+                <input type="number" id="rounds" step="any"><br>
+                <button type="submit">Calculate</button><br>
+            </form>
+            <h2 id="out1"></h2>
+        </div>
+        <div id="2l">
+            <h1>Automated Calculation</h1>
+            <small>In progress...</small>
+        </div>
+        <div id="3l">
+            <h1>Specific Manual Calculation</h1>
+            <form id="form2">
+                <label>Distance Covered by Weight in one Round: (in meters)</label><br>
+                <input type="number" id="distance2" step="any"><br>
+                <label>Total Weight of Weights bieng lifted: (in kg)</label><br>
+                <input type="number" id="weight2" step="any"><br>
+                <label>Total kilocalories (Calories you find on food labels) wanted to be burnt: </label><br>
+                <input type="number" id="cal" step="any"><br>
+                <button type="submit">Calculate</button><br>
+            </form>
+            <h2 id="out2"></h2>
+        </div>
+        <div id="4l">
+            <h1>Specific Automated Calculation</h1>
+            <small>In progress...</small>
+        </div>
+        <script src="manual.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </div>
 </body>
 </html>
