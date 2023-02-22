@@ -5,7 +5,7 @@ function calculate1() {
     const r = document.getElementById("rounds").value
     let cal
 
-    cal = (9.8*kg*d*r*4) / 4148
+    cal = Math.round((9.8*kg*d*r*4.148) / 4148)
     out.innerHTML = `Total Calories Burnt: ${cal} Kilo Calories, or ${cal * 1000} Small calories`
     alert(`Total Calories Burnt: ${cal} Calories (Kilo Calories), or ${cal * 1000} Small calories, Good Job!`)
     return false
@@ -18,7 +18,7 @@ function calculate2() {
     const cal = document.getElementById("cal").value
     let rounds
 
-    rounds = 4148 * cal / (9.8*4*kg*d)
+    rounds = Math.round(4148 * cal / (9.8*4.148*kg*d))
     out.innerHTML = `Total Rounds you need to do: ${rounds}`
     alert(`Total Rounds you need to do: ${rounds}, You can do it!`)
     return false
