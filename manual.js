@@ -62,3 +62,16 @@ function init() {
 }
 
 window.onload = init
+
+function handleMotionEvent(event) {
+
+    const x = event.accelerationIncludingGravity.x;
+    const y = event.accelerationIncludingGravity.y;
+    const z = event.accelerationIncludingGravity.z;
+
+    document.getElementById("x").innerHTML = x
+    document.getElementById("y").innerHTML = y
+    document.getElementById("z").innerHTML = z
+}
+
+window.addEventListener("devicemotion", handleMotionEvent, true);
