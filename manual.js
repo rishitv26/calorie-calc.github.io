@@ -59,19 +59,19 @@ function init() {
     document.getElementById("2l").style.display = 'none'
     document.getElementById("3l").style.display = 'none'
     document.getElementById("4l").style.display = 'none'
+
+    function handleMotionEvent(event) {
+        const x = event.accelerationIncludingGravity.x;
+        const y = event.accelerationIncludingGravity.y;
+        const z = event.accelerationIncludingGravity.z;
+    
+        document.getElementById("x").innerHTML = x
+        document.getElementById("y").innerHTML = y
+        document.getElementById("z").innerHTML = z
+    }
+    
+    window.addEventListener("devicemotion", handleMotionEvent, true);
+    console.log("added litsener")
 }
 
 window.onload = init
-
-function handleMotionEvent(event) {
-
-    const x = event.accelerationIncludingGravity.x;
-    const y = event.accelerationIncludingGravity.y;
-    const z = event.accelerationIncludingGravity.z;
-
-    document.getElementById("x").innerHTML = x
-    document.getElementById("y").innerHTML = y
-    document.getElementById("z").innerHTML = z
-}
-//
-window.addEventListener("devicemotion", handleMotionEvent, true);
