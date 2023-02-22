@@ -73,5 +73,5 @@ function handleMotionEvent(event) {
     document.getElementById("y").innerHTML = y
     document.getElementById("z").innerHTML = z
 }
-
+//
 window.addEventListener("devicemotion", handleMotionEvent, true);
